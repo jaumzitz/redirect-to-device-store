@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Unimed Litoral</title>
 </head>
 
-<script>
-    console.log(navigator)
-    const navigatorData = navigator
-
-    const plataforma = navigator.plataform.toLowerCase()
-    
-    const info = document.createElement('div')
-    info.innerText = navigator.platform
-
-    window.addEventListener("DOMContentLoaded", () => {
-        
-
-        if (plataforma.includes('iphone')) {
-            location.href = 'https://apps.apple.com/br/app/unimed-litoral/id1583623036'
+<script defer>
 
 
-        } else if (plataforma.includes('linux')) {
 
-            location.href = 'https://play.google.com/store/apps/details?id=br.com.unimed.litoral.app&hl=pt_BR'
-        } else {
-            document.body.appendChild(info)
-        }
 
-    })
+    let plataforma = navigator.platform
+    plataforma = plataforma.toLowerCase()
+
+
+    if (plataforma.includes('iphone')) {
+        this.location.href = 'https://apps.apple.com/br/app/unimed-litoral/id1583623036'
+
+
+    } else if (plataforma.includes('linux')) {
+
+        this.location.href = 'https://play.google.com/store/apps/details?id=br.com.unimed.litoral.app&hl=pt_BR'
+    } else {
+        this.location.href = 'https://site.unimedlitoral.com.br'
+    }
+
+
 </script>
 
 
 <body>
-    
+    <div>aaaa</div>
 </body>
+
 </html>
