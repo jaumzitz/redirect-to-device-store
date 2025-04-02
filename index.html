@@ -9,12 +9,25 @@
 <script>
     console.log(navigator)
     const navigatorData = navigator
+
+    const plataforma = navigator.plataform.toLowerCase()
     
     const info = document.createElement('div')
-    info.innerText = (navigator.platform)
+    info.innerText = navigator.platform
 
     window.addEventListener("DOMContentLoaded", () => {
-        document.body.appendChild(info)
+        
+
+        if (plataforma === 'iphone') {
+            location.href = 'https://play.google.com/store/apps/details?id=br.com.unimed.litoral.app&hl=pt_BR'
+
+        } else if (plataforma.includes('linux')) {
+
+            location.href = 'https://play.google.com/store/apps/details?id=br.com.unimed.litoral.app&hl=pt_BR'
+        } else {
+            document.body.appendChild(info)
+        }
+
     })
 </script>
 
